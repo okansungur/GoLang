@@ -6,18 +6,18 @@ import (
 
 	"fmt"
 
-	_ "github.com/lib/pq"
-	"gopkg.in/yaml.v3"
+	_ "github.com/lib/pq" //Go postgres driver for Go's database/sql package
+	"gopkg.in/yaml.v3"    //The yaml package enables Go programs to comfortably encode and decode YAML values
 
 	"encoding/json"
 
 	"net/http"
 
-	"github.com/gorilla/mux"
+	"github.com/gorilla/mux" //Package gorilla/mux implements a request router and dispatcher for matching incoming requests to their respective handler
 )
 
 const (
-	host     = "host.docker.internal"
+	host     = "host.docker.internal" //we will connect to postgresql from Docker
 	port     = 5432
 	user     = "postgres"
 	password = "postgres"
